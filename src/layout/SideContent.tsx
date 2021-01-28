@@ -1,6 +1,9 @@
 import { Col, Row } from 'antd'
 import React from 'react'
+import Category from '../components/Category'
+import Gallery from '../components/Gallery'
 import SearchBar from '../components/SearchBar'
+import TopPost from '../components/TopPost'
 
 const SideContent = () => {
   return (
@@ -9,10 +12,13 @@ const SideContent = () => {
         <SearchBar />
       </Col>
       <Col span={24}>
-        category list
+        <Category />
       </Col>
       <Col span={24}>
-        top posts
+        <TopPost />
+      </Col>
+      <Col span={24}>
+        <Gallery />
       </Col>
     </Row>
   )

@@ -4,20 +4,22 @@ import { Col, Row } from 'antd'
 import MainContent from './MainContent'
 import SideContent from './SideContent'
 
-const StyledRow = styled(Row)`
-  padding: 2rem 3rem;
+const StyledDev = styled('div')`
+  padding: 1rem 3rem;
 `
 
 const ContentArea = () => {
   return (
-    <StyledRow gutter={[16, 16]}>
-      <Col span={8}>
-        <SideContent />
-      </Col>
-      <Col span={16}>
-        <MainContent />
-      </Col>
-    </StyledRow>
+    <StyledDev>
+      <Row className="gutter-row" gutter={16}>
+        <Col span={8}>
+          <SideContent />
+        </Col>
+        <Col span={16}>
+          <MainContent />
+        </Col>
+      </Row>
+    </StyledDev>
   )
 }
 

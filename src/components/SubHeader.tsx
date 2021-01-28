@@ -1,5 +1,6 @@
 import React from 'react'
 import styled from '@emotion/styled'
+import PageLink from './PageLink'
 
 const PageHeader = styled.div`
   heigt: 30px;
@@ -10,15 +11,15 @@ const PageHeader = styled.div`
 `
 
 const Title = styled('div')`
-  font-size: 16px;
+  font-size: 22px;
   font-weight: bold;
 `
 
 const SubHeader = () => {
   return (
     <PageHeader>
-      <Title>Logo</Title>
-      <div>HOME / BLOG / LEFT SIDEBAR</div>
+      <Title>Blog</Title>
+      <PageLink />
     </PageHeader>
   )
 }

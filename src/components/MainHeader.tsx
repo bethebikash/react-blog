@@ -23,7 +23,7 @@ const MenuItem = Styled.li`
 `
 
 const Logo = Styled.span`
-  font-size: 18px;
+  font-size: 22px;
   font-weight: bold;
 `
 
