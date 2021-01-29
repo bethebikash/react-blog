@@ -29,6 +29,11 @@ const StyledNum = styled('span')`
   padding-right: 20px;
 `
 
+const dateConvert = (date: string) => {
+  const dateF = date.split('T')
+  return dateF[0]
+}
+
 const TopPost = () => {
   const [response, setResponse] = useState<any>(null)
 
@@ -60,7 +65,9 @@ const TopPost = () => {
               <StyledNews>{resp.title}</StyledNews>
               <SubTitle>
                 <span>{resp.source.name} </span>
-                <span>{'-'} date</span>
+                <span>
+                  {'-'} {dateConvert(resp.publishedAt)}
+                </span>
               </SubTitle>
             </Col>
           </Row>

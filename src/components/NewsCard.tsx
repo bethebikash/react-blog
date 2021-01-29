@@ -22,6 +22,11 @@ const StyledMeta = styled(Meta)`
   }
 `
 
+const dateConvert = (date: string) => {
+  const dateF = date.split('T')
+  return dateF[0]
+}
+
 const NewsCard: React.FC<CardProps> = ({ news }) => {
   return (
     <AntCard
@@ -31,7 +36,9 @@ const NewsCard: React.FC<CardProps> = ({ news }) => {
     >
       <PreTitle>
         <span>{news.source.name} </span>
-        <span>{'-'} date</span>
+        <span>
+          {'-'} {dateConvert(news.publishedAt)}
+        </span>
       </PreTitle>
       <StyledMeta title={news.title} description={news.description} />
     </AntCard>
