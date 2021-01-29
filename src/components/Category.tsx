@@ -1,10 +1,15 @@
 import styled from '@emotion/styled'
 import { Card } from 'antd'
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 const StyledCard = styled(Card)`
   background-color: #fafafa;
   margin-top: 25px;
+  a {
+    style: none;
+    color: inherit;
+  }
 `
 
 const StyleHeader = styled('h3')`
@@ -13,8 +18,9 @@ const StyleHeader = styled('h3')`
   font-size: 20px;
 `
 
-const StyledPa = styled('p')`
+const StyledLi = styled(Link)`
   font-weight: bold;
+  display: block;
   &:not(:last-child) {
     border-bottom: 1.5px solid lightgray;
     margin: 10px 0;
@@ -26,11 +32,17 @@ const Category = () => {
   return (
     <StyledCard bordered={false}>
       <StyleHeader>Categories</StyleHeader>
-      <StyledPa>Business</StyledPa>
-      <StyledPa>Health</StyledPa>
-      <StyledPa>Science</StyledPa>
-      <StyledPa>Sports</StyledPa>
-      <StyledPa>Technology</StyledPa>
+      <StyledLi to="/business">Business</StyledLi>
+      <StyledLi to="/health">Health</StyledLi>
+      <StyledLi to="/science">Science</StyledLi>
+      <StyledLi to="/technology">Technology</StyledLi>
+      <StyledLi to="/sports">Sports</StyledLi>
+      {/* <Link to="/health">
+          <StyledLi>Health</StyledLi>
+        </Link> */}
+      {/* <StyledLi>Science</StyledLi>
+        <StyledLi>Sports</StyledLi>
+        <StyledLi>Technology</StyledLi> */}
     </StyledCard>
   )
 }

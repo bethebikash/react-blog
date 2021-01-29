@@ -32,6 +32,14 @@ const StyledPagination = styled('div')`
   align-item: center;
   width: 100%;
   padding-bottom: 3rem;
+  .ant-pagination-item-active{
+    border: none;
+  }
+  .ant-pagination-item-active a{
+    background-color: #031140;
+    color: #fff;
+  }
+  .
 `
 
 function App() {
